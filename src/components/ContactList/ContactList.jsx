@@ -18,7 +18,7 @@ export default function ContactList() {
         <ul className={css.list}>
             {visibleContacts.map((contact) => (
                 <li key={contact.id}>
-                    <Contact id={contact.id} name={contact.name} phone={contact.phone} />
+                    <Contact id={contact.id} name={contact.name} number={contact.number} />
                 </li>
             ))}
         </ul>

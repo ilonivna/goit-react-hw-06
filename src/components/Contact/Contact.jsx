@@ -6,9 +6,9 @@ import { deleteContact } from "../../redux/contactsSlice";
 
 
 
-export default function Contact({ id, name, phone }) {
+export default function Contact({ id, name, number }) {
     const dispatch = useDispatch();
-    
+
     const handleDelete = () => {
         dispatch(deleteContact(id));
     }
@@ -18,7 +18,7 @@ export default function Contact({ id, name, phone }) {
             <div>
             <p><IoPerson />{name}</p>
             <p><MdLocalPhone />
-{phone}</p></div>
+{number}</p></div>
             <button className={css.btn} onClick={handleDelete}>Delete</button>
         </div>
     )
